@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 
+import { RecipeService } from './recipes'
+
 @Component({
   selector: 'rb-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: 'app.component.html',
+  providers: [RecipeService]
 })
 export class AppComponent {
-  title = 'app works!';
+
 }
