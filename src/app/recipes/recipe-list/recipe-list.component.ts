@@ -16,5 +16,8 @@ export class RecipeListComponent implements OnInit {
     //In Angular we have it available at "component" level, more power.
     ngOnInit() {
         this.recipes = this.recipeService.getRecipes();
+        this.recipeService.recipesChanged.subscribe(
+            (recipes: Recipe[]) => this.recipes = recipes
+        ); //Inform me when any event is emmitted
     }
 }
